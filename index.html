@@ -10,8 +10,8 @@
 <body>
     <script>
         let link = document.querySelector('link[rel=import]');
-        let content = link.querySelector('roof');
-        let clone = document.body.appendChild(content.cloneNode(true));
+        let template = link.querySelector('roof');
+        let clone = document.importNode(template.content, true);
         document.querySelector('#message').appendChild(clone);
     </script>
     <p>Import file</p>   
