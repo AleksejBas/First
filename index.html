@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House</title>
     <link rel="import" href="roof.html" />
-    <script src="Creator.js"></script>
+
 </head>
 <body>
     <SCRIPT type="text/javascript" language="JavaScript" 
 src="Creator.js"></SCRIPT>
+    <script>
+        let link = document.querySelector('link[rel=import]');
+        let content = link.querySelector('#roof');
+        document.body.appendChild(content.cloneNode(true));
+    </script>
     <p>Import file</p>   
 </body>
 </html>
